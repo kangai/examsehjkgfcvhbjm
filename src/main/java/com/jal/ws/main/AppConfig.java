@@ -26,6 +26,7 @@ public class AppConfig implements Config {
 
     DataSource realDataSource(){
         // application.propertiesにあるDB設定キーから値を取得し設定します。
+        // コメントを修正
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(env.getRequiredProperty("spring.datasource.driverClassName"));
         dataSource.setUrl(env.getRequiredProperty("spring.datasource.url"));
