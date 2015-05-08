@@ -1,0 +1,1 @@
+select * from USER_INFO where id = /* id */1;

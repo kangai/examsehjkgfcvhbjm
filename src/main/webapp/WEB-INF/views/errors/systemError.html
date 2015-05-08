@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Chat</title>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		<!--
+			$(document).ready(function() {
+			})
+		-->
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>システムエラー</h1>
+		</div>
+		
+		<form id="errorForm" name="errorForm" method="POST">
+			<table>
+				<tr>
+					<td>システムエラーが発生しました。</td>
+				</tr>
+				<tr>
+					<td>
+						<span th:text="${message}">エラー内容</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span th:text="${messageDetail}">エラー詳細内容</span>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+
+
+</html>
