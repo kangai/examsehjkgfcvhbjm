@@ -8,8 +8,7 @@ import org.seasar.doma.jdbc.entity.NamingType;
 @Table(name = "user_info")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(sequence = "seq_customers")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
     private final Integer id;
 
@@ -33,7 +32,6 @@ public class User {
         this.age = age;
         this.address = address;
     }
-
 
     public String toString() {
         return "com.jal.ws.main.entity.User(id=" + this.id + ", name=" + this.name + ", age=" + this.age + ", address=" + this.address + ")";
