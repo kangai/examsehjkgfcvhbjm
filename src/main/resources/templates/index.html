@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="jp">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Hit me, Beat me, Bite me, Push me !</title>
+</head>
+<body>
+    <h2>ユーザーたち</h2>
+    <form action="index.html" th:action="@{/register}" method="POST">
+        <p>Name：<input type="text" name="name" value="山田　花子"/></p>
+        <p>Age ：<input type="text" name="age" value="39"/></p>
+        <p>Adds：<input type="text" name="address" value="大阪府　箕面市"/></p>
+        <p><input type="submit" value="Send"/></p>
+    </form>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>名前</th>
+            <th>年齢</th>
+            <th>出身</th>
+            <th>操作</th>
+        </tr>
+        <tr th:each="user,idxSts : ${users}">
+            <!--<td th:text="${idxSts.count}">1</td>-->
+            <td th:text="${user.id}">001</td>
+            <td th:text="${user.name}">Name</td>
+            <td th:text="${user.age}">21</td>
+            <td th:text="${user.address}">沖縄,Japan</td>
+            <td><input type="submit" value="Send"/></td>
+        </tr>
+    </table>
+</body>
+</html>
