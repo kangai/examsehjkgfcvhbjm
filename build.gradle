@@ -102,6 +102,6 @@ jar {
 }
 
 flyway {
-  url = 'jdbc:h2:file:~/target/mydb'
+  url = 'jdbc:h2:file:~/database/mydb'
   user = 'sa'
 }
