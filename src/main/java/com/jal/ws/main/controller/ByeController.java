@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created by 0A8936 on 2015/04/07.
+ * To say bye-bay
  */
 @Controller
 public class ByeController {
